@@ -9,3 +9,16 @@ spring:
 
 server:
   port: 8081
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 6000
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule  
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
