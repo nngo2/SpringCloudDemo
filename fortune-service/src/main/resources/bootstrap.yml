@@ -5,7 +5,8 @@ spring:
   cloud:
     config:
       discovery:
-        enabled: true
-
+        enabled: false
+      uri: http://localhost:8090
+       
 server:
   port: 8082

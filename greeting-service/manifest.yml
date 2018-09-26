@@ -1,0 +1,13 @@
+---
+applications:
+- name: greeting-service
+  path: target/greeting-service-0.0.1-SNAPSHOT.jar
+  host: demo-greeting-service
+  memory: 768M
+  services:
+  - configserver
+  - service-registry
+  - cloud-bus
+  env:
+    SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: false
+
