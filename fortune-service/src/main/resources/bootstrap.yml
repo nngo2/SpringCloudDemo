@@ -7,6 +7,3 @@ spring:
       discovery:
         enabled: false
       uri: http://localhost:8090
-       
-server:
-  port: 8082

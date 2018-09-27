@@ -10,9 +10,6 @@ spring:
         enabled: false
       uri: http://localhost:8090        
 
-server:
-  port: 8081
-  
 encrypt:
   keyStore:
     location: classpath:/config-server.jks
@@ -20,9 +17,17 @@ encrypt:
     alias: config-server-key
     secret: xori@nt-p@ss  
 
+feign:
+  hystrix:
+    enabled: true
+
 ribbon:
-  ReadTimeout: 10000
-  ConnectTimeout: 6000
+  eureka:
+    enabled: true
+  MaxAutoRetries: 3
+  MaxAutoRetriesNextServer: 1
+  ReadTimeout: 5000
+  ConnectTimeout: 10000
   NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule  
 
 hystrix:

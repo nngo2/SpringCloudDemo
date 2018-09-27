@@ -14,6 +14,9 @@ public class FortuneServiceClient {
 		this.fortuneApi = fortuneApi;
 	}
 
+	/*
+	 * this method fallback is overridden by class-based fallback!!!
+	 */
 	@HystrixCommand(fallbackMethod = "defaultFortune")
 	public String getFortune() {
 		Map<String, String> result = fortuneApi.getFortune();
@@ -23,5 +26,12 @@ public class FortuneServiceClient {
 
 	public String defaultFortune() {
 		return "Your future is uncertain - Fortune service down";
+	}
+	
+	
+	public String getFortune2() {
+		Map<String, String> result = fortuneApi.getFortune();
+		String fortune = result.get("fortune");
+		return fortune;
 	}
 }

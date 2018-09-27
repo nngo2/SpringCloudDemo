@@ -3,11 +3,11 @@ applications:
 - name: greeting-service
   path: target/greeting-service-0.0.1-SNAPSHOT.jar
   host: demo-greeting-service
-  memory: 768M
+  memory: 1G
   services:
   - configserver
   - service-registry
-  - cloud-bus
+  - circuit-dashboard
   env:
     SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: false
 

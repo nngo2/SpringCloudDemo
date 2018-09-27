@@ -44,5 +44,14 @@ public class GreetingController {
 
 		return "Fortune service is not enabled!";
 	}
+	
+	@GetMapping("/future")
+	public String getGreeting2() {
+		
+		if (greetingProperties.isDisplayFortune()) {
+			return fortuneServiceClient.getFortune2();
+		}
 
+		return "Fortune service is not enabled!";
+	}
 }
