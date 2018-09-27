@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: hystrix-dashboard
+  
+  cloud:
+    config:
+      discovery:
+        enabled: false
+      uri: http://localhost:8090
