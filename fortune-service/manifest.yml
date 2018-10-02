@@ -2,7 +2,7 @@
 applications:
 - name: fortune-service
   path: target/fortune-service-0.0.1-SNAPSHOT.jar
-  host: demo-fortune-service
+  host: fortune-service
   memory: 768M
   services:
   - configserver
