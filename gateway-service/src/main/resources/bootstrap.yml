@@ -1,9 +1,9 @@
 spring:
   application:
-    name: fortune-service
+    name: gateway-service
   
   cloud:
     config:
       discovery:
         enabled: false
-      uri: http://localhost:8090     
+      uri: http://localhost:8090

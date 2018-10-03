@@ -15,25 +15,4 @@ encrypt:
     location: classpath:/config-server.jks
     password: xori@nt-p@ss
     alias: config-server-key
-    secret: xori@nt-p@ss  
-
-feign:
-  hystrix:
-    enabled: true
-
-ribbon:
-  eureka:
-    enabled: true
-  MaxAutoRetries: 3
-  MaxAutoRetriesNextServer: 1
-  ReadTimeout: 5000
-  ConnectTimeout: 10000
-  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule  
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 30000
+    secret: xori@nt-p@ss       

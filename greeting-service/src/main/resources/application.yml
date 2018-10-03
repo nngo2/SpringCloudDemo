@@ -1,12 +1,15 @@
 server:
-  port: 8081
+  port: ${PORT:8081}
 
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-               
+feign:
+  hystrix:
+    enabled: true  
+        
 greeting:
   displayFortune: true
   from: default

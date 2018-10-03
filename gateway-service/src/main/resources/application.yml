@@ -1,0 +1,19 @@
+server:
+  port: ${PORT:8762}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"       
+
+zuul:
+    prefix: /api       
+    routes:
+      fortune:
+        path: /fortune/**
+        serviceId: fortune-service
+      greeting:
+        path: /greeting/**
+        serviceId: greeting-service        
+ 
