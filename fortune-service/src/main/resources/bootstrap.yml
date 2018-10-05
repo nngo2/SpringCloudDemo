@@ -1,7 +1,10 @@
 spring:
   application:
     name: fortune-service
-  
+
+  profiles:
+    active: development,oauth
+      
   cloud:
     config:
       discovery:

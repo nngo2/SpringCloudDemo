@@ -1,7 +1,10 @@
 spring:
   application:
     name: gateway-service
-  
+ 
+  profiles:
+    active: development,oauth
+      
   cloud:
     config:
       discovery:

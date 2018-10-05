@@ -2,7 +2,7 @@ spring:
   application:
     name: greeting-service
   profiles:
-    active: development
+    active: development,oauth
   
   cloud:
     config:

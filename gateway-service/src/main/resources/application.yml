@@ -5,15 +5,28 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"       
-
+        include: "*"      
+         
 zuul:
     prefix: /api       
+    sensitiveHeaders:
     routes:
       fortune:
         path: /fortune/**
         serviceId: fortune-service
       greeting:
         path: /greeting/**
-        serviceId: greeting-service        
- 
+        serviceId: greeting-service                    
+          
+security:
+    oauth2:
+        client:
+            client-id: 0oagha0frtVYo0hRF0h7
+            client-secret: 3UbBcvTuTwMRaMFr3INGl-EfNMo_UNOrUZTPZPDP
+            access-token-uri: https://dev-665190.oktapreview.com/oauth2/default/v1/token
+            user-authorization-uri: https://dev-665190.oktapreview.com/oauth2/default/v1/authorize
+            scope: openid profile email
+        resource:
+            user-info-uri: https://dev-665190.oktapreview.com/oauth2/default/v1/userinfo
+            token-info-uri: https://dev-665190.oktapreview.com/oauth2/default/v1/introspect
+            prefer-token-info: false
